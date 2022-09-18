@@ -8,6 +8,9 @@
     .container {
         max-width: 960px;
     }
+    .promo {
+        padding-bottom: 10px;
+    }
     .about {
         &__wrapper {
             grid-template-columns: 400px 520px;
@@ -20,6 +23,23 @@
                 grid-template-columns: 40px 195px;
                 column-gap: 15px;
             }
+        }
+    }
+    .resume {
+        &__wrapper {
+            padding-left: 0;
+        }
+    }
+    .skills {
+        &__items {
+            grid-template-columns: repeat(auto-fit, 270px);
+            justify-content: space-between;
+        }
+        &__ratings {
+            grid-template-columns: repeat(auto-fit, 350px);
+            grid-auto-rows: minmax(70px, auto);
+            justify-content: space-between;
+            padding: 0 30px;
         }
     }
 }
@@ -36,10 +56,9 @@
     .about {
         &__wrapper {
             grid-template-columns: 300px 380px;
-            column-gap: 40px;
         }
         &__skills {
-            grid-template-columns: 368px;
+            grid-template-columns: 380px;
             grid-auto-rows: minmax(115px,auto);
             &-item {
                 grid-template-columns: 40px 320px;
@@ -47,6 +66,27 @@
             }
         }
     }
+    .resume {
+        &__wrapper {
+            column-gap: 60px;
+            grid-template-columns: repeat(2,320px);
+        }
+    }
+    .skills {
+        &__items {
+            padding: 0 20px;
+        }
+        &__ratings {
+            grid-template-columns: repeat(auto-fit, 320px);
+            justify-content: space-between;
+            padding: 0;
+            column-gap: 0;
+            &-line {
+                width: 100%;
+            }
+        }
+    }
+    
 }
 
 @media (max-width: 768px) {
@@ -58,12 +98,6 @@
             font-size: 28px;
         }
     }
-    .promo {
-        &__title {
-            line-height: 39px;
-            width: 300px;
-        }
-    }  
     .about {
         padding-top: 40px;
         &__wrapper {
@@ -78,7 +112,31 @@
                 grid-template-columns: 40px 200px;
                 column-gap: 20px;
             }
-            
+        }
+    }
+    .resume {
+        padding-top: 40px;
+        &__wrapper {
+            grid-template-columns: 1fr;
+            column-gap: 60px;
+            row-gap: 40px;
+        }
+    }
+    .skills {
+        padding-top: 40px;
+        &__items {
+            padding: 0;
+            justify-content: center;
+            gap: 20px;
+        }
+        &__ratings {
+            grid-template-columns: repeat(auto-fit, 320px);
+            grid-auto-rows: minmax(70px, auto);
+            justify-content: center;
+            margin-top: 40px;
+            &-line {
+                width: 100%;
+            }
         }
     }
 }
@@ -113,10 +171,22 @@
     .about {
         &__wrapper {
             grid-template: 340px auto auto / 1fr;
-
         }
         &__skills {
             grid-template-columns: 1fr;
+        }
+    }
+    .resume {
+        &__wrapper {
+            padding: 40px 5px 0 5px;
+        }
+    }
+    .skills {
+        &__items {
+            margin-top: 20px;
+        }
+        &__ratings {
+            grid-template-columns: repeat(auto-fit,300px);
         }
     }
     
