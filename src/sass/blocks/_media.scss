@@ -139,6 +139,7 @@
         }
     }
     .promo {
+        min-height: 70vh;
         &__title {
             line-height: 39px;
             width: 300px;
@@ -149,9 +150,7 @@
         &__wrapper {
             grid-template: 400px auto auto / 1fr;
         }
-        &__photo {
-            grid-row: unset;
-        }
+
         &__skills {
             grid-template-columns: repeat(2, 260px);
             &-item {
@@ -233,12 +232,18 @@
         }
     }
     .promo {
+
+        padding-top: 160px;
         background: url('../img/main_bg.jpg') no-repeat 57%/cover;
         &__btns {
+            
             margin-top: 30px;
         }
     }
     .about {
+        &__photo {
+            display: none;
+        }
         &__wrapper {
             grid-template: 340px auto auto / 1fr;
         }
